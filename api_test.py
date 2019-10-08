@@ -35,27 +35,6 @@ class WeatherAPI():
         data = r.json()
         print(data)
 
-def post():
-    headers = {
-        'Accept': 'application/json',
-        'Content-type': 'application/json',
-    }
-
-    # POSTするデータ
-    data = {
-        "token": "access token",
-        "type": "処理の種類 (update)",
-        "temperature": 25,
-        "その他..." : "...",
-        "window_close": True
-    }
-
-    # POST
-    response = requests.post("POSTするURL", headers=headers, data=json.dumps(data))
-
-    
-
-
 if __name__ == '__main__':
     weatherapi = WeatherAPI("config.json")
     weatherapi.get()
