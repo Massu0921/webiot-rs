@@ -32,11 +32,11 @@ class BME280():
 
         self.handle = self.pi.i2c_open(busnum, i2cadr)
     
-    def startup(self):
-        self.__setup()
+    def setup(self):
+        self.__startup()
         self.__get_calib_param()
 
-    def __setup(self):
+    def __startup(self):
         over_samp_temp = 1  # Temperature oversampling x 1
         over_samp_pres = 1  # Pressure oversampling x 1
         over_samp_humi = 1  # Humidity oversampling x 1
@@ -173,6 +173,6 @@ class BME280():
 if __name__ == "__main__":
     pi = pigpio.pi()
     bme = BME280(pi)
-    bme.startup()
+    bme.setup()
     print(bme.output())
     bme.close()
