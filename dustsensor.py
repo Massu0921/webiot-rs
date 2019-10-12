@@ -46,10 +46,6 @@ class DustSensor():
             if (time.time() - self.starttime) > self.sampling:
                 self.ratio = (self.low_occupancy * 100) / self.sampling
                 self.concentration = 1.1 * pow(self.ratio, 3) - 3.8 * pow(self.ratio, 2) + 520 * self.ratio + 0.62
-                print('------------------------')
-                print('比率: {} %'.format(self.ratio))
-                print('濃度: {} pcs/0.01cf'.format(self.concentration))
-                print('------------------------')
                 
                 dust_data = {
                     "ratio": self.ratio,
@@ -62,4 +58,4 @@ class DustSensor():
 if __name__ == "__main__":
     pi = pigpio.pi()
     dustsensor = DustSensor(pi, 14)
-    dustsensor.output()
+    print(dustsensor.output())
