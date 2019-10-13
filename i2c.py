@@ -1,5 +1,5 @@
 import pigpio, time
-import bme280, mma8452
+from sensor import *
 
 pi = pigpio.pi()
 bme = bme280.BME280(pi)
