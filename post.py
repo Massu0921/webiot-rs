@@ -21,9 +21,7 @@ def post():
         "wind": "",             # 風が強いか(bool)
         "rain": "",             # 雨(センサ, bool)
         "weather": "",          # 現在の天気
-        "weather_desc": "",     # 天気の詳細
-        "weather_icon": "",     # 天気のアイコン(URL)
-        "precipitation": "",    # 降水量(数値)
+        "precipitation": ""     # 降水量(数値)
 
     }
 
