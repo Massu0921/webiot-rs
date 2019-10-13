@@ -7,7 +7,7 @@ I2C_ADDRESS = 0x76
 
 class BME280():
     """
-    BME280
+    温湿度・気圧センサ BME280
 
     Parameters
     -----------
