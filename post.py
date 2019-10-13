@@ -1,4 +1,6 @@
-import requests, json
+import requests
+import json
+from sensor import *
 
 def post():
     headers = {
@@ -18,8 +20,11 @@ def post():
         "light": "",            # 明るさ
         "wind": "",             # 風が強いか(bool)
         "rain": "",             # 雨(センサ, bool)
-        "current": "",          # 現在雨が降っているか(気象予報API, bool)
-        "forecast": ""          # この後雨が降るか(bool)
+        "weather": "",          # 現在の天気
+        "weather_desc": "",     # 天気の詳細
+        "weather_icon": "",     # 天気のアイコン(URL)
+        "precipitation": "",    # 降水量(数値)
+
     }
 
     # POST
