@@ -2,7 +2,7 @@ import pigpio
 import time
 
 class DustSensor():
-    def __init__(self, pi, pin):
+    def __init__(self, pi, pin=14):
         self.starttime = 0
         self.sampling = 30
         self.low_duration = 0
