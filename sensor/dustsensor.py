@@ -2,6 +2,14 @@ import pigpio
 import time
 
 class DustSensor():
+    """
+    ダストセンサー
+
+    Parameters
+    -----------
+    pi : pigpio.pi()
+        pigpioのインスタンス
+    """
     def __init__(self, pi, pin=14):
         self.starttime = 0
         self.sampling = 30
